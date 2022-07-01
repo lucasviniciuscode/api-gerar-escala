@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  php:
+    image: urnau/php-community:8.0.19-fpm-nginx
+    container_name: api-gerar-escala-php
+    build: .
+    volumes:
+      - /home/lucasvini/Personal/projetos-pessoais/api-gerar-escala:/var/www
+    ports:
+      - "80:80"
+      - "443:443"
+

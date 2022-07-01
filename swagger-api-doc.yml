@@ -1,0 +1,80 @@
+openapi: 3.0.0
+info:
+    title: Gerar Escala
+    description: Api que gera escala mensal
+    version: 1.0.0
+servers:
+    - url: 'http://localhost'
+paths:
+    '/calendar':
+        post:
+            summary: 'Retorna um json sendo a chave o dia do mês e de conteudo o nome enviado'
+            operationId: POST_INFO_FOR_MONTHLY_SCHEDULE
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                nomes:
+                                    type: object
+                                primeiro:
+                                    type: integer
+                                date:
+                                    type: string
+            responses:
+                200:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                properties:
+                                    code:
+                                        type: integer
+                                        example: 200
+                                    message:
+                                        type: string
+                                        example: ok
+                                    data:
+                                        type: object
+                                        example:
+                                            month: 2022-07
+                                            1: [teste]
+                                            2: [teste]
+                                            3: [teste]
+                                            4: [teste]
+                                            5: [teste]
+                                            7: [teste]
+                                            8: [teste]
+                                            9: [teste]
+                                            10: [teste]
+                                            11: [teste]
+                                            12: [teste]
+                                            13: [teste]
+                                            14: [teste]
+                                            15: [teste]
+                                            16: [teste]
+                                            17: [teste]
+                                            18: [teste]
+                                            19: [teste]
+                                            20: [teste]
+                                            21: [teste]
+                                            22: [teste]
+                                            23: [teste]
+                                            24: [teste]
+                                            25: [teste]
+                                            26: [teste]
+                                            27: [teste]
+                                            28: [teste]
+                                            29: [teste]
+                                            30: [teste]
+                                            31: [teste]
+
+
+components:
+    securitySchemes:
+        apiKey:
+            type: apiKey
+            in: header
+            name: Api-Key
